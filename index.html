@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday Sri Vidhya! 💖</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A beautiful premium interactive birthday surprise website made especially for Sri Vidhya Loganathan's 21st Birthday. 21 Years of Smiles, Kindness & Memories.">
+    <meta property="og:title" content="Happy 21st Birthday Sri Vidhya Loganathan 🎂">
+    <meta property="og:description" content="An interactive birthday surprise filled with memories, friendship timeline, and special messages.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Canvas for Fireworks and Background Floating Particles -->
+    <canvas id="fireworks-canvas"></canvas>
+    <div id="particle-container"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="heart-loader">
+                <svg viewBox="0 0 32 29.6" class="floating-heart-svg">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                </svg>
+            </div>
+            <h2 class="preloader-text">Preparing Something Special For Sri Vidhya ❤️</h2>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main id="main-content" style="opacity: 0;">
+
+        <!-- FIRST SCREEN (COUNTDOWN HERO) -->
+        <section id="hero-section" class="screen-section">
+            <div class="hero-container glass-card">
+                <div class="sparkles-bg"></div>
+                <div class="hero-header">
+                    <span class="badge rose-badge">For Sri Vidhya Loganathan ✨</span>
+                </div>
+                <h1 id="hero-title" class="hero-title">🎂 Happy Birthday Sri Vidhya Loganathan 🎂</h1>
+                <p id="hero-subtitle" class="hero-subtitle">21 Years of Smiles, Kindness & Beautiful Memories 💖</p>
+                
+                <div class="typing-container">
+                    <span id="typing-text" class="typing-text"></span><span class="cursor">|</span>
+                </div>
+
+                <!-- COUNTDOWN WRAPPER -->
+                <div class="countdown-wrapper">
+                    <div class="countdown-container">
+                        <div class="countdown-item">
+                            <span id="days" class="time-num">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="countdown-divider">:</div>
+                        <div class="countdown-item">
+                            <span id="hours" class="time-num">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="countdown-divider">:</div>
+                        <div class="countdown-item">
+                            <span id="minutes" class="time-num">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="countdown-divider">:</div>
+                        <div class="countdown-item">
+                            <span id="seconds" class="time-num">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENTER SURPRISE BUTTON -->
+                <div class="enter-btn-container">
+                    <button id="enter-btn" class="btn">
+                        <span>Enter Your Surprise ✨</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <p id="btn-hint" class="btn-hint">Click above to enter the surprise! ✨</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MEET THE AMAZING SRI VIDHYA -->
+        <section id="profile-section" class="content-section">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title text-gradient">Meet The Amazing Sri Vidhya 💕</h2>
+                    <p class="section-desc">A beautiful soul who brings happiness to everyone around her.</p>
+                </div>
+
+                <div class="profile-grid">
+                    <!-- Profile Card -->
+                    <div class="profile-card glass-card scroll-reveal-left">
+                        <div class="profile-img-container">
+                            <img src="assets/profile.jpg" alt="Sri Vidhya Loganathan" class="profile-img">
+                            <span class="profile-avatar-hint">📸 Place photo here</span>
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name">Sri Vidhya Loganathan</h3>
+                            <div class="badge-row">
+                                <span class="age-badge">21 Years Young ✨</span>
+                                <span class="role-badge">Best Friend 🌸</span>
+                            </div>
+                            <p class="profile-quote">"Always radiating positivity, spreading kindness, and making every single moment beautiful."</p>
+                        </div>
+                    </div>
+
+                    <!-- Illustration Card -->
+                    <div class="illustration-card glass-card scroll-reveal-right">
+                        <div class="illustration-img-container">
+                            <img src="assets/birthday_illustration.png" alt="Happy 21st Birthday illustration" class="illustration-img">
+                        </div>
+                        <div class="illustration-message">
+                            <h4>Cheers to 21! 🥂</h4>
+                            <p>May this year bring you closer to all your dreams, filled with laughter, success, peace, and endless joy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHY YOU'RE SO SPECIAL -->
+        <section id="special-section" class="content-section">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title text-gradient">Why You're So Special 💖</h2>
+                    <p class="section-desc">Just a few reasons why you are one of the most cherished people in the world.</p>
+                </div>
+
+                <div class="special-cards-grid">
+                    <!-- Card 1 -->
+                    <div class="flip-card scroll-reveal" style="--card-index: 1;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <div class="card-icon"><i data-lucide="sun"></i></div>
+                                <h3>Your Smile</h3>
+                                <p>Hover or Tap to reveal ✨</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <h3>Your smile brightens every room.</h3>
+                                <p>Your smile is like a warm ray of sunshine. It brings positive energy, joy, and puts an instant smile on anyone's face who sees it. Never lose it! 😊</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flip-card scroll-reveal" style="--card-index: 2;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <div class="card-icon"><i data-lucide="heart-handshake"></i></div>
+                                <h3>Your Support</h3>
+                                <p>Hover or Tap to reveal ✨</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <h3>You always support your friends.</h3>
+                                <p>No matter the distance or time, you are always there as a pillar of support. Your loyalty and understanding make you the best friend anyone could ever ask for. 🤝</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="flip-card scroll-reveal" style="--card-index: 3;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <div class="card-icon"><i data-lucide="sparkles"></i></div>
+                                <h3>Your Presence</h3>
+                                <p>Hover or Tap to reveal ✨</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <h3>You make every moment memorable.</h3>
+                                <p>Whether it is a simple conversation or a long phone call, you have a beautiful way of turning everyday moments into unforgettable memories that are cherished forever. ✨</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="flip-card scroll-reveal" style="--card-index: 4;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <div class="card-icon"><i data-lucide="flower2"></i></div>
+                                <h3>Your Heart</h3>
+                                <p>Hover or Tap to reveal ✨</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <h3>Your kindness inspires everyone.</h3>
+                                <p>Your heart is full of genuine warmth and empathy. You put others first and constantly show a gentle, beautiful soul that makes the world a much better place. 🌸</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="flip-card scroll-reveal" style="--card-index: 5;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <div class="card-icon"><i data-lucide="party-popper"></i></div>
+                                <h3>Your Future</h3>
+                                <p>Hover or Tap to reveal ✨</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <h3>You deserve endless happiness.</h3>
+                                <p>Because you are pure gold, you deserve a lifetime of laughter, success, good health, and a future filled with dreams that come true. Cheers to your happiness! 🥂</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: BEAUTIFUL MEMORIES -->
+        <section id="memories-section" class="content-section">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title text-gradient">Beautiful Memories 📸</h2>
+                    <p class="section-desc">Capturing beautiful moments of friendship and joy. (Hover to zoom and tilt!)</p>
+                </div>
+
+                <div class="masonry-gallery">
+                    <!-- Polaroid 1 -->
+                    <div class="polaroid-card scroll-reveal" style="--tilt-angle: -2deg;">
+                        <div class="polaroid-img-wrapper">
+                            <img src="assets/memories/photo1.png" alt="Sunset and Smiles" class="polaroid-img">
+                            <span class="gallery-avatar-hint">📸 photo1.png</span>
+                        </div>
+                        <div class="polaroid-info">
+                            <p class="polaroid-caption">Sweet smiles and beautiful sunsets</p>
+                            <span class="polaroid-date">June 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 2 -->
+                    <div class="polaroid-card scroll-reveal" style="--tilt-angle: -1.5deg;">
+                        <div class="polaroid-img-wrapper">
+                            <img src="assets/memories/photo3.jpg" alt="Walking together" class="polaroid-img">
+                            <span class="gallery-avatar-hint">📸 photo3.jpg</span>
+                        </div>
+                        <div class="polaroid-info">
+                            <p class="polaroid-caption">Walking together through life's garden</p>
+                            <span class="polaroid-date">January 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 3 -->
+                    <div class="polaroid-card scroll-reveal" style="--tilt-angle: -3deg;">
+                        <div class="polaroid-img-wrapper">
+                            <img src="assets/memories/photo5.png" alt="Glowing fairy lights" class="polaroid-img">
+                            <span class="gallery-avatar-hint">📸 photo5.png</span>
+                        </div>
+                        <div class="polaroid-info">
+                            <p class="polaroid-caption">Sparkling memories, warm cozy nights</p>
+                            <span class="polaroid-date">April 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FRIENDSHIP TIMELINE -->
+        <section id="timeline-section" class="content-section">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title text-gradient">Friendship Timeline 🌸</h2>
+                    <p class="section-desc">A beautiful look back at the chapters that define our bond.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <!-- Event 1 -->
+                    <div class="timeline-item scroll-reveal-left">
+                        <div class="timeline-icon">🌸</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">The Beginning</span>
+                            <h3>First Meeting</h3>
+                            <p>Personal sharing activity in Naveen Sir's class.</p>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="timeline-item scroll-reveal-right">
+                        <div class="timeline-icon">📷</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">Captured Joy</span>
+                            <h3>First Selfie</h3>
+                            <p>Annual day evening time first selfie.</p>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="timeline-item scroll-reveal-left">
+                        <div class="timeline-icon">😂</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">Laugh Out Loud</span>
+                            <h3>Funniest Moment</h3>
+                            <p>Dmart sambavam, naa panna nee panna atrocities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="timeline-item scroll-reveal-right">
+                        <div class="timeline-icon">✨</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">Golden Moments</span>
+                            <h3>Favourite Memory</h3>
+                            <p>Bike ride at morning time and chasing bus for your Salem ride.</p>
+                        </div>
+                    </div>
+
+                    <!-- Event 5 -->
+                    <div class="timeline-item scroll-reveal-left">
+                        <div class="timeline-icon">🎂</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">June 10, 2026</span>
+                            <h3>Birthday Celebration</h3>
+                            <p>Celebrating 21 years of a wonderful soul. Sri Vidhya's milestone birthday. A day to mark how special you are and toast to the beautiful future ahead!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: A MESSAGE FOR SRI VIDHYA -->
+        <section id="message-section" class="content-section">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title text-gradient">A Message For Sri Vidhya 💌</h2>
+                    <p class="section-desc">Click the envelope below to open your personalized letter.</p>
+                </div>
+
+                <div class="envelope-wrapper scroll-reveal">
+                    <div class="envelope" id="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-paper glass-card">
+                            <div class="letter-scroll-area">
+                                <!-- The exact verbatim letter message -->
+                                <div class="letter-content" id="letter-content">
+                                    <p class="letter-salutation">Happy 21st Birthday, Sri Vidhya!</p>
+                                    
+                                    <p>I am so happy ma because it's your birthday today! 🎉❤️</p>
+                                    
+                                    <p>Happy Birthday to you, Vidhya Ma! 🥳✨</p>
+                                    
+                                    <p>Nee eppavum happy-ah irukanum, adhu dhaan enoda biggest wish. Sometimes ennaala unakku kashtam vandhirukkum, adhukku naan sorry ma. Aana nee eppovume "Edhuku nee sorry sollanum?" nu solluva. Adhu dhaan unoda nalla manasu. ❤️</p>
+                                    
+                                    <p>My dearest friend, first time unnai paatha appo namma rendu perum sandai poduvom-nu dhaan nenachen. Aana apram "Okay" nu friends aagi, inniku ivlo close friends aagirukkom. Nee ennai "enoda Xerox" nu sonna moments ellam enakku romba special. 😊</p>
+                                    
+                                    <p>Namma first meet, first conversation, and together spend panna moments ellam enakku innum nalla nyabagam iruku. Slowly namma pesi pesi, namma personal things share panna aarambichom. Andha trust, understanding, and comfort dhaan namma friendship-ah innum special aakiduchu. ❤️</p>
+                                    
+                                    <p>One of my favorite memories is our first phone call on 7 March 2026. 📞✨ Andha call-la irundhu namma friendship innum strong aachu. Adhukku apram pesina ovvoru conversation-um enakku special dhaan.</p>
+                                    
+                                    <p>Most importantly, ivlo short period-la friend aagi, enoda happiness-ah maarita. Naan happy-ah irukum podhum, sad-ah irukum podhum, nee oru nalla friend-ah en kooda irundhuruka. Adhuku romba thanks ma. 💖</p>
+                                    
+                                    <p>Unakku endha kashtam vandhaalum, naan God kitta pray pannuven. Nee life-la nalla jeyichu, ovvoru padiyum munneri, un dreams ellam achieve pannanum. Adhu dhaan enoda heartfelt wish. ✨🌸</p>
+                                    
+                                    <p>Nee deserve panra happiness, success, peace, and love ellam unakku kidaikanum. Un smile eppovum ippadiye irukanum. 😊❤️</p>
+                                    
+                                    <p>Endha situation vandhaalum, naan un kooda iruppen as your best friend and well-wisher. 🤝❤️</p>
+                                    
+                                    <p>And one more thing... namma rendu perum serndhu photo eduthu romba naal aagiduchu ma. Seekiram marubadiyum neraya photos edukkanum! 📸😊</p>
+                                    
+                                    <p>Once again,</p>
+                                    
+                                    <p class="letter-closing">🎂 Happy Birthday to You, Sri Vidhya Loganathan! 🎂</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="envelope-front"></div>
+                    </div>
+                </div>
+                
+                <div class="envelope-instructions">
+                    <button id="toggle-envelope-btn" class="btn secondary-btn">
+                        <span>Click to Open Letter 💌</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: FINAL SURPRISE -->
+        <section id="surprise-section" class="screen-section">
+            <div class="surprise-container glass-card">
+                <div class="section-header scroll-reveal">
+                    <span class="badge purple-badge">Your Final Gift 🎁</span>
+                    <h2 class="section-title text-gradient">One Last Surprise</h2>
+                    <p class="section-desc">Tap the gift box below to open your birthday surprise!</p>
+                </div>
+
+                <div class="gift-box-wrapper scroll-reveal">
+                    <div class="gift-box" id="gift-box">
+                        <div class="gift-lid">
+                            <div class="lid-ribbon-v"></div>
+                            <div class="lid-ribbon-h"></div>
+                            <div class="gift-bow">
+                                <div class="bow-loop bow-left"></div>
+                                <div class="bow-loop bow-right"></div>
+                            </div>
+                        </div>
+                        <div class="gift-body">
+                            <div class="body-ribbon-v"></div>
+                            <div class="body-ribbon-h"></div>
+                            <div class="gift-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gift-btn-container scroll-reveal">
+                    <button id="open-gift-btn" class="btn">
+                        <span>Open Your Birthday Surprise 🎁</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+
+                <!-- Final Surprise Messages revealed when box is opened -->
+                <div id="final-surprise-reveal" class="final-reveal-hidden">
+                    <div class="final-card glass-card">
+                        <!-- HTML/CSS Cake Cutting Animation Scene -->
+                        <div class="cake-cutting-scene">
+                            <!-- Cake Stand -->
+                            <div class="cake-stand"></div>
+                            
+                            <!-- Cake Wrapper -->
+                            <div class="cake-wrapper">
+                                <!-- Left half of cake -->
+                                <div class="cake-half left-half">
+                                    <div class="cake-frosting"></div>
+                                    <div class="cake-inner-cream"></div>
+                                    <!-- Candle 1 -->
+                                    <div class="candle candle-1">
+                                        <div class="candle-wick"></div>
+                                        <div class="flame"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right half of cake -->
+                                <div class="cake-half right-half">
+                                    <div class="cake-frosting"></div>
+                                    <div class="cake-inner-cream"></div>
+                                    <!-- Candle 2 -->
+                                    <div class="candle candle-2">
+                                        <div class="candle-wick"></div>
+                                        <div class="flame"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Knife -->
+                            <div class="knife-element">
+                                <svg viewBox="0 0 100 100" class="knife-svg">
+                                    <!-- Sleek vector cake knife -->
+                                    <path d="M10,80 L25,65 L40,65 L50,70 L55,65 L65,75 L55,85 L50,80 L40,80 L25,80 Z" fill="#ff85a7" stroke="#ff5287" stroke-width="1.5" /> <!-- handle -->
+                                    <path d="M40,70 L70,70 L95,45 L90,40 L65,65 L40,65 Z" fill="#e8d7ff" stroke="#c3a4ff" stroke-width="1.5" /> <!-- blade -->
+                                </svg>
+                            </div>
+                            
+                            <!-- Sparkles bursting on cut -->
+                            <div class="cake-sparkles">
+                                <span class="c-sparkle cs-1">✨</span>
+                                <span class="c-sparkle cs-2">💖</span>
+                                <span class="c-sparkle cs-3">🌸</span>
+                                <span class="c-sparkle cs-4">✨</span>
+                                <span class="c-sparkle cs-5">❤️</span>
+                            </div>
+                        </div>
+                        <h3 class="final-heading">For Sri Vidhya Loganathan</h3>
+                        <p class="final-text">
+                            "Sri Vidhya, no matter where life takes us,<br>
+                            you'll always be one of the most special people in my life.<br>
+                            Happy 21st Birthday ❤️"
+                        </p>
+                        <div class="heart-pulse-box">❤️</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">Made for my dearest best friend Sri Vidhya Ma 💕</p>
+                <p class="footer-subtext">&copy; 2026 • 21 Years of Beauty & Grace</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JS Scripts -->
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Application Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
